@@ -1,0 +1,1 @@
+include ':app', ':jokefactory', ':jokedispenser', ':joke_backend'
