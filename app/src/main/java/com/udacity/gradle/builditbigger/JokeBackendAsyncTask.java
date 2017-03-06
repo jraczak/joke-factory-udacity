@@ -35,7 +35,8 @@ class JokeBackendAsyncTask extends AsyncTask<Context, Void, String> {
 
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    .setRootUrl("https://joke-factory-160303.appspot.com/_ah/api/");
+                    .setRootUrl("https://joke-factory-160303.appspot.com/_ah/api/")
+                    .setApplicationName("joke-factory-160303");
             // End of options for local / dev server
             myApi = builder.build();
         }
