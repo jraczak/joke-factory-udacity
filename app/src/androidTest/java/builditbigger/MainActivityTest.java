@@ -1,9 +1,13 @@
-package com.udacity.gradle.builditbigger;
+package builditbigger;
 
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
+
+import com.udacity.gradle.builditbigger.MainActivity;
+import com.udacity.gradle.builditbigger.R;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -24,7 +28,7 @@ public class MainActivityTest {
 
     @Test
     public void mainActivityTest() {
-        onView(withId(R.id.button_tell_joke)).perform(click());
+        onView(ViewMatchers.withId(R.id.button_tell_joke)).perform(click());
 
         onView(withId(R.id.joke_textview)).check(matches(withText("I'm not very funny. Hah..ha...ha?")));
 
