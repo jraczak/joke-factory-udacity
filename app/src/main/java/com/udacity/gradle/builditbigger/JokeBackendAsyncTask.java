@@ -3,6 +3,7 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -42,7 +43,7 @@ class JokeBackendAsyncTask extends AsyncTask<Context, Void, String> {
         }
 
         context = params[0];
-        //String name = params[0].second;
+        Log.d("AsyncTask", "Context from params was " + params[0]);
 
         try {
             return myApi.getJoke().execute().getData();
